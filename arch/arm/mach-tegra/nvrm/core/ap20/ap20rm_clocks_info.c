@@ -1306,7 +1306,7 @@ static const NvRmPllClockInfo s_Ap20PllClockTable[] =
         CLK_RST_CONTROLLER_PLLA_BASE_0,
         CLK_RST_CONTROLLER_PLLA_MISC_0,
         50000,
-        1400000
+        1400000  
     },
 
     {   /* PLLC base output */
@@ -1316,7 +1316,7 @@ static const NvRmPllClockInfo s_Ap20PllClockTable[] =
         CLK_RST_CONTROLLER_PLLC_BASE_0,
         CLK_RST_CONTROLLER_PLLC_MISC_0,
         100000,
-        1400000
+        1400000 
     },
 
     {   /* PLLM base output */
@@ -1336,7 +1336,7 @@ static const NvRmPllClockInfo s_Ap20PllClockTable[] =
         CLK_RST_CONTROLLER_PLLX_BASE_0,
         CLK_RST_CONTROLLER_PLLX_MISC_0,
         100000,
-        1400000
+        1400000 
     },
 
     {   /* PLLP base output */

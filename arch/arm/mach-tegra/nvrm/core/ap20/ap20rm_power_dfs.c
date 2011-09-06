@@ -383,7 +383,7 @@ NvRmPrivAp20GetPmRequest(
 
     // Slave CPU1 power management policy thresholds:
     // - use fixed values if they are defined explicitly, otherwise
-    // - set CPU1 OffMax threshold at 2/3 of cpu frequency range,
+    // - set CPU1 OffMax threshold at 2/3 (2 / 5 now ) of cpu frequency range,
     //   and half of that frequency as CPU1 OnMin threshold
     if ((s_Cpu1OffMaxKHz == 0) && (s_Cpu1OnMinKHz == 0))
     {
@@ -391,9 +391,9 @@ NvRmPrivAp20GetPmRequest(
             NvRmPrivGetSocClockLimits(NvRmModuleID_Cpu)->MaxKHz;
 
         s_Cpu1OnMinKHz = NVRM_CPU1_ON_MIN_KHZ ?
-                         NVRM_CPU1_ON_MIN_KHZ : (MaxKHz / 3);
+                         NVRM_CPU1_ON_MIN_KHZ : (MaxKHz / 5); //was 3 now 6 
         s_Cpu1OffMaxKHz = NVRM_CPU1_OFF_MAX_KHZ ?
-                          NVRM_CPU1_OFF_MAX_KHZ : (2 * MaxKHz / 3);
+                          NVRM_CPU1_OFF_MAX_KHZ : (2 * MaxKHz / 5); //was 3 now 6
         NV_ASSERT(s_Cpu1OnMinKHz < s_Cpu1OffMaxKHz);
     }
 

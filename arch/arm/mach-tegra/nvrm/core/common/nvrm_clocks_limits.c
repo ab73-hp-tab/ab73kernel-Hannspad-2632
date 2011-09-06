@@ -59,15 +59,15 @@
 // Voltage list for corresponding clocks
 NvU32 FakeShmooVoltages[] = {
 #if defined(CONFIG_NEWBL)
-700,	//900,
+750,	//900,  //216
 #endif
-750,	//900,
-800,	//900,
-850,	//900,
-900,	//950,
-950,	//1025,
-1000,	//1125,
-	MAX_VOLTAGE // New Entry
+800,	//900,  //312
+850,	//900,  //456
+900,	//900,  //608
+950,	//950,  //760
+1025,	//1025,  //912
+1125,	//1125,  //1000
+	MAX_VOLTAGE, // New Entry
 };
 
 #if defined(CONFIG_NEWBL)
@@ -91,7 +91,7 @@ NvRmScaledClkLimits FakepScaledCpuLimits = {
 		760000,
 		912000,
 		1000000,
-		MAX_OVERCLOCK, // New Entry
+		MAX_OVERCLOCK // New Entry
 	}
 };
 

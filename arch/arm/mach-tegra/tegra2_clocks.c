@@ -922,7 +922,7 @@ static struct clk tegra_pll_a = {
 	.cf_min    = 1000000,
 	.cf_max    = 6000000,
 	.vco_min   = 20000000,
-	.vco_max   = 1400000000,
+	.vco_max   = 1400000000,  //was 1400000000
 	.pll_table = tegra_pll_a_table,
 };
 
